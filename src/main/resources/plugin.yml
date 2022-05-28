@@ -1,0 +1,13 @@
+name: SurvivalGames
+version: '${project.version}'
+main: de.dieblxme.survivalgames.Main
+api-version: 1.16
+authors: [ DieBlxme ]
+description: SurvivalGames by DieBlxme
+website: https://dieblxme.de
+commands:
+  location:
+    description: Set the spawn locations.
+  start:
+    description: Forces the game to start.
+  test:

@@ -37,6 +37,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         System.out.println(prefix + ChatColor.GOLD + "Starting " + ChatColor.YELLOW + "SurivalGames " + ChatColor.RED  + "v1.0 " + ChatColor.GOLD + "by " + ChatColor.BLUE + "DieBlxme");
         System.out.println(prefix + ChatColor.GOLD + "Please check if your config is up to date! " + ChatColor.BLUE + "./plugins/SurvivalGames/config.yml " + ChatColor.GOLD + " Set the spawn locations with /location");
+        System.out.println(prefix + ChatColor.GOLD + "You can also change permissions there");
         main = this;
         state = GameStates.LOBBY;
         playersAlive = new ArrayList<>();

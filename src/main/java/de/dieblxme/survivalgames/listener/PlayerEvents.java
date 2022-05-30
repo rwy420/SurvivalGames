@@ -45,7 +45,7 @@ public class PlayerEvents implements Listener {
             event.getPlayer().setBedSpawnLocation(location);
         }else {
             event.setJoinMessage(" ");
-            if(event.getPlayer().hasPermission(Main.main.locationPerm) || event.getPlayer().hasPermission(Main.main.allPerm)) {
+            if(event.getPlayer().hasPermission(Main.main.locationPerm)) {
                 event.getPlayer().sendMessage(Main.main.getPrefix() + ChatColor.RED + "No spawn location is set!");
                 event.getPlayer().teleport(event.getPlayer().getWorld().getSpawnLocation());
             }else {
@@ -56,7 +56,7 @@ public class PlayerEvents implements Listener {
 
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
-        if(Main.main.state == GameStates.LOBBY && !event.getPlayer().hasPermission(Main.main.locationPerm) && !event.getPlayer().hasPermission(Main.main.allPerm)) {
+        if(Main.main.state == GameStates.LOBBY && !event.getPlayer().hasPermission(Main.main.locationPerm)) {
             event.setCancelled(true);
         }
     }
@@ -80,21 +80,21 @@ public class PlayerEvents implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        if(!event.getPlayer().hasPermission(Main.main.allPerm)) {
+        if(!event.getPlayer().hasPermission("sg.build")) {
             event.setCancelled(true);
         }
     }
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event) {
-        if(!event.getPlayer().hasPermission(Main.main.allPerm)) {
+        if(!event.getPlayer().hasPermission("sg.build")) {
             event.setCancelled(true);
         }
     }
 
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent event) {
-        if(!event.getPlayer().hasPermission(Main.main.allPerm)) {
+        if(!event.getPlayer().hasPermission("sg.build")) {
             event.setCancelled(true);
         }
     }

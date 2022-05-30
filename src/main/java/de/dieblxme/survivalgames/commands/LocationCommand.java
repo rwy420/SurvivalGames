@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 public class LocationCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender.hasPermission(Main.main.locationPerm) || sender.hasPermission(Main.main.allPerm)) {
+        if(sender.hasPermission(Main.main.locationPerm)) {
             int position;
             Location location;
             if(args.length == 1) {

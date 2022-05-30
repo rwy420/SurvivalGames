@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 public class StartCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender.hasPermission(Main.main.startPerm) || sender.hasPermission(Main.main.allPerm)) {
+        if(sender.hasPermission(Main.main.startPerm)) {
             Main.main.countdown.startLobbyCountdown();
             Bukkit.broadcastMessage(Main.main.getPrefix() + ChatColor.GOLD + "The game force started! 60 seconds to start");
         }else {

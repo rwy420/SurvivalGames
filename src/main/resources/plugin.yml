@@ -8,5 +8,7 @@ website: https://dieblxme.de
 commands:
   location:
     description: Set the spawn locations.
+    permission: sg.location
   start:
-    description: Forces the game to start.
+    description: orces the game to start.
+    permission: sg.start

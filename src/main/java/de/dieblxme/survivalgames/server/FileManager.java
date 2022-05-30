@@ -24,20 +24,6 @@ public class FileManager {
         }
         Main.main.minPlayers = config.getInt("Game.MinimalPlayerCount");
         Main.main.maxPlayers = config.getInt("Game.MaximalPlayerCount");
-
-        if(config.getString("Perms.LocationPerm") == null) {
-            config.set("Perms.LocationPerm", "sg.perms.location");
-        }
-        if(config.getString("Perms.StartPerm") == null) {
-            config.set("Perms.StartPerm", "sg.perms.start");
-        }
-        if(config.getString("Perms.Admin") == null) {
-            config.set("Perms.Admin", "sg.perms.admin");
-        }
-
-        Main.main.locationPerm = config.getString("Perms.LocationPerm");
-        Main.main.startPerm = config.getString("Perms.LocationPerm");
-        Main.main.allPerm = config.getString("Perms.Admin");
         saveConfig();
     }
 

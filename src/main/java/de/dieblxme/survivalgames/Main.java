@@ -27,9 +27,8 @@ public final class Main extends JavaPlugin {
     public Utils utils;
     public SGChests chests;
     public String gameID;
-    public String locationPerm;
-    public String startPerm;
-    public String allPerm;
+    public String locationPerm = "sg.location";
+    public String startPerm = "sg.start";
 
     public int lobbyTime = 60, ingameTime = 60 * 20, restartTime = 15;
 
